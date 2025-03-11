@@ -1,10 +1,10 @@
 # luhn_util
 
-This is a simple gem to generate and validate using Luhn algorithm.
+A simple Ruby utility to validate and generate Luhn-compliant numbers.
 
-`luhn_util` is a gem that is able to:
+`luhn_util` is able to:
 - Validate an input according to the Luhn algorithm
-- Generate random Luhn number based on any valid length
+- Generate random Luhn number based on any valid length and prefix
 
 The algorithm followed is based on [Luhn Algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
 
@@ -42,6 +42,14 @@ Length may also be specified:
 $ Luhn.generate(length: 8)
 $ 29974938
 ```
+Prefix may also be supplied:
+```shell
+$ Luhn.generate(prefix: '88')
+$ 8821951428417137
+
+$ Luhn.generate(length: 8, prefix: '88')
+$ 88405022
+```
 
 ## Development
 
@@ -51,7 +59,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/luhn_util. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/luhn_util/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/katpadi/luhn_util. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/luhn_util/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -59,4 +67,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the luhn_util project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/luhn_util/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the luhn_util project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/katpadi/luhn_util/blob/main/CODE_OF_CONDUCT.md).

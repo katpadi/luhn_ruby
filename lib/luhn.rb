@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Luhn
+  MIN_LENGTH = 2
   class << self
     def valid?(digits)
       return false unless numeric_string?(digits)
@@ -11,11 +12,15 @@ module Luhn
       sum % 10 == 0
     end
 
-    def generate(length = 16)
-      raise ArgumentError, 'length must be valid' if length.nil? || length < 2
+    def generate(length: 16, prefix: nil)
+      raise ArgumentError, 'length must be more than minimum' unless length.to_i > MIN_LENGTH
 
-      partial_num = ''
-      (length - 1).times do
+      raise ArgumentError, 'prefix length invalid' if prefix && (prefix.to_s.length + MIN_LENGTH >= length)
+
+      raise ArgumentError, 'prefix must be numeric' if prefix && !numeric_string?(prefix)
+
+      partial_num = (prefix&.empty? ? '' : prefix).to_s
+      (length - 1 - partial_num.length).times do
         partial_num += rand(10).to_s
       end
       mod = 10 - (non_checksum_sum(partial_num) % 10)
@@ -25,9 +30,7 @@ module Luhn
 
     private
 
-    def numeric_string?(str)
-      !!(str =~ /\A[-+]?[0-9]+\z/)
-    end
+    def numeric_string?(str) = !!(str =~ /\A[-+]?[0-9]+\z/)
 
     def non_checksum_sum(partial_num)
       sum = 0
