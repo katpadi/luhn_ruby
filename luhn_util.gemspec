@@ -3,13 +3,13 @@
 require_relative "lib/luhn/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "luhn_ruby"
+  spec.name = "luhn_util"
   spec.version = Luhn::VERSION
   spec.authors = ["Kat Padilla"]
   spec.email = ["hello@katpadi.ph"]
   spec.summary = "A simple Luhn algorithm implementation using Ruby."
   spec.description = "A simple Luhn algorithm implementation using Ruby to validate and generate Luhn numbers"
-  spec.homepage = 'https://rubygems.org/gems/luhn_ruby'
+  spec.homepage = 'https://rubygems.org/gems/luhn_util'
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 

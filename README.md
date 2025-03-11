@@ -1,8 +1,8 @@
-# luhn_ruby
+# luhn_util
 
 This is a simple gem to generate and validate using Luhn algorithm.
 
-`luhn_ruby` is a gem that is able to:
+`luhn_util` is a gem that is able to:
 - Validate an input according to the Luhn algorithm
 - Generate random Luhn number based on any valid length
 
@@ -13,13 +13,13 @@ The algorithm followed is based on [Luhn Algorithm](https://en.wikipedia.org/wik
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add luhn_ruby
+bundle add luhn_util
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```bash
-gem install luhn_ruby
+gem install luhn_util
 ```
 
 ## Usage
@@ -51,7 +51,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/luhn_ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/luhn_ruby/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/luhn_util. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/luhn_util/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -59,4 +59,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the luhn_ruby project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/luhn_ruby/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the luhn_util project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/luhn_util/blob/main/CODE_OF_CONDUCT.md).
