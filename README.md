@@ -4,6 +4,7 @@ A simple Ruby utility to validate and generate Luhn-compliant numbers.
 
 `luhn_util` is able to:
 - Validate an input according to the Luhn algorithm
+- Calculate the check digit for a given numeric input
 - Generate random Luhn number based on any valid length and prefix
 
 The algorithm followed is based on [Luhn Algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
@@ -31,6 +32,11 @@ To check if input is valid:
 ```shell
 $ Luhn.valid?('5185443765446305')
 $ true
+```
+To calculate the check digit:
+```shell
+$ Luhn.check_digit('1234567890')
+$ 3
 ```
 The `generate` method returns a 16-character number by default:
 ```shell

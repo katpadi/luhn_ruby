@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    luhn_util (0.2.0)
+    luhn_util (0.3.0)
 
 GEM
   remote: https://rubygems.org/

@@ -11,6 +11,9 @@ module Luhn
       sum = checksum + non_checksum
       sum % 10 == 0
     end
+    def check_digit(partial_num)
+      (10 - (non_checksum_sum(partial_num) % 10)) % 10
+    end
 
     def generate(length: 16, prefix: nil)
       raise ArgumentError, 'length must be more than minimum' unless length.to_i > MIN_LENGTH
@@ -37,7 +40,7 @@ module Luhn
       partial_num.chars.map(&:to_i).reverse.each_with_index do |num, i|
         if i.even?
           num *= 2
-          num = num > 9 ? num - 9 : num
+          num -= 9 if num > 9
         end
         sum += num
       end

@@ -75,4 +75,12 @@ RSpec.describe Luhn do
       expect { Luhn.generate(prefix: 'foo') }.to raise_error(ArgumentError)
     end
   end
+
+  describe '.check_digit' do
+    it 'calculates check digit' do
+      expect(Luhn.check_digit('3852000002323')).to eq(7)
+      expect(Luhn.check_digit('1234567890')).to eq(3)
+      expect(Luhn.check_digit('1122334455667788')).to eq(8)
+    end
+  end
 end
